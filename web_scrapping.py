@@ -15,7 +15,7 @@ pdf_paths = [] # Guarda o caminho dos PDFs
 
 # Realiza o download dos PDFs e depois os escreve em um arquivo
 for i, url in enumerate(pdf_urls, start=1): 
-    pdf_path = f"assets/anexo{i}.pdf"
+    pdf_path = f"assets/pdfs/anexo{i}.pdf"
     response = requests.get(url) # Realiza o download do arquivo PDF
     if response.status_code == 200: 
         with open(pdf_path, "wb") as file: # Vai utilizar a escrita binária para registrar as informações no arquivo
@@ -35,3 +35,13 @@ with zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:
         print(f'Adicionado ao ZIP: {pdf}')
 
 print(f'ZIP criado: {zip_filename}')
+
+origin_path = 'anexos.zip'
+destination_path = r'assets\arquivos_zip\anexos.zip'
+
+try:
+    shutil.move(origin_path, destination_path)
+    print(f'Arquivo movido com sucesso! ')
+
+except Exception as e:
+    print(f'Não foi possível mover o arquivo: {origin_path}')
