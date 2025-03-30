@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "db3db51c-4356-47e1-b87c-374bf6d634d8",
+		"name": "API Busca de Operadoras",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36793195"
+	},
+	"item": [
+		{
+			"name": "Buscar Operadoras por Nome Fantasia",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/buscar_operadoras?termo=Unimed",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"buscar_operadoras"
+					],
+					"query": [
+						{
+							"key": "termo",
+							"value": "Unimed"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Operadoras por Parte do Nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/buscar_operadoras?termo=Brad",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"buscar_operadoras"
+					],
+					"query": [
+						{
+							"key": "termo",
+							"value": "Brad"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Operadoras sem Termo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/buscar_operadoras?termo=",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"buscar_operadoras"
+					],
+					"query": [
+						{
+							"key": "termo",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
